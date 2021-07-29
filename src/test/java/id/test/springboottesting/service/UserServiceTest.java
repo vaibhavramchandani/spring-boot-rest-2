@@ -27,6 +27,7 @@ import static org.mockito.Mockito.*;
  */
 
 @ExtendWith(MockitoExtension.class)
+@PropertySource({"classpath:notifications-${spring.profiles.active}.properties"})
 class UserServiceTest {
 
     @Mock
