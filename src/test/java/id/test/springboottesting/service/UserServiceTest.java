@@ -18,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.*;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -27,9 +28,8 @@ import org.springframework.beans.factory.annotation.Value;
  * Date Time        : 12/18/2019
  * Telegram         : @tennugraha
  */
-
-@ExtendWith(MockitoExtension.class)
 @PropertySource({"classpath:notifications-${spring.profiles.active}.properties"})
+@ExtendWith(MockitoExtension.class)
 class UserServiceTest {
 
     @Mock
