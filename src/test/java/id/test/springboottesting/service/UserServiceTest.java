@@ -28,7 +28,7 @@ import org.springframework.beans.factory.annotation.Value;
  * Date Time        : 12/18/2019
  * Telegram         : @tennugraha
  */
-@PropertySource({"classpath:notifications-${spring.profiles.active}.properties"})
+@PropertySource({"classpath:notifications-${activatedProperties}.properties"})
 @ExtendWith(MockitoExtension.class)
 class UserServiceTest {
 
