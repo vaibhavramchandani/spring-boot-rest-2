@@ -21,7 +21,7 @@ import java.util.Optional;
 
 @Service
 @Transactional
-@PropertySource({"classpath:notifications-${activatedProperties}.properties"})
+@PropertySource({"classpath:notifications-${spring.profiles.active}.properties"})
 public class UserService {
 
     private final UserRepository userRepository;
