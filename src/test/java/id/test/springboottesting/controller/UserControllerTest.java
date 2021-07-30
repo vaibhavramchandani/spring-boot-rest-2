@@ -96,7 +96,7 @@ class UserControllerTest {
     void shouldCreateNewUser() throws Exception {
         given(userService.createUser(any(User.class))).willAnswer((invocation) -> invocation.getArgument(0));
 
-        User user = new User(null, "newuser1@gmail.com", "pwd", "Name");
+        User user = new User(null, "newuser1@gmail.com", "Password@123", "Name");
 
         this.mockMvc.perform(post("/api/users")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
